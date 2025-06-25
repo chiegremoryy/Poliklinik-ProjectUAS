@@ -149,9 +149,9 @@
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $Dokter->nama }}</td>
-                                            <td>{{ $Dokter->alamat }}</< /td>
-                                            <td>{{ $Dokter->no_hp }}</< /td>
-                                            <td>{{ $Dokter->Poli->nama_poli }}</< /td>
+                                            <td>{{ $Dokter->alamat }}</td>
+                                            <td>{{ $Dokter->no_hp }}</td>
+                                            <td>{{ $Dokter->Poli->nama_poli }}</td>
                                             <td>
                                                 <div class="d-flex justify-content-start gap-2">
                                                     <button type="button"

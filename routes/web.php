@@ -49,6 +49,7 @@ Route::get('/pages/dokter', function () {
 Route::get('/pages/dokter/jadwalPeriksa', [dokterController::class, 'jadwalPeriksa'])->name('jadwalPeriksa.dokter')->middleware('auth:dokter');
 Route::post('/pages/dokter/jadwalPeriksa', [dokterController::class, 'CRUDJadwal'])->name('jadwalPeriksa.dokter')->middleware('auth:dokter');
 Route::get('/pages/dokter/periksaPasien', [dokterController::class, 'periksaPasien'])->name('periksaPasien.dokter')->middleware('auth:dokter');
+Route::post('/dokter/periksa/update', [dokterController::class, 'CRUDPeriksa'])->name('periksaPasien.update')->middleware('auth:dokter');
 Route::get('/pages/dokter/riwayatPeriksa', [dokterController::class, 'riwayatPeriksa'])->name('riwayatPeriksa.dokter')->middleware('auth:dokter');
 Route::get('/pages/dokter/profile', function () {
     return view('pages.dokter.profile');
