@@ -61,8 +61,8 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">CRUD Jadwal Periksa</li>
+                        <li class="breadcrumb-item"><a href="#">Dokter</a></li>
+                        <li class="breadcrumb-item active">Jadwal Periksa</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->

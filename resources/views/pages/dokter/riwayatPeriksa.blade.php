@@ -1,4 +1,4 @@
-@include('layouts.header', ['title' => 'Dokter | Periksa Pasien'])
+@include('layouts.header', ['title' => 'Dokter | Riwayat Periksa'])
 <!-- Sidebar Menu -->
 <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -21,7 +21,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="/pages/dokter/periksaPasien" class="nav-link active">
+            <a href="/pages/dokter/periksaPasien" class="nav-link">
                 <i class="nav-icon fas fa-user-injured"></i>
                 <p>
                     Periksa Pasien
@@ -29,7 +29,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="/pages/dokter/riwayatPeriksa" class="nav-link">
+            <a href="/pages/dokter/riwayatPeriksa" class="nav-link active">
                 <i class="nav-icon fas fa-history"></i>
                 <p>
                     Riwayat Periksa
@@ -62,7 +62,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Dokter</a></li>
-                        <li class="breadcrumb-item active">Periksa Pasien</li>
+                        <li class="breadcrumb-item active">Riwayat Periksa</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -78,7 +78,7 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">List Pasien</h3>
+                            <h3 class="card-title">Riwayat Periksa Pasien</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
@@ -99,8 +99,7 @@
                                             <td>{{ $periksa->pasien->nama }}</td>
                                             <td>{{ $periksa->keluhan }}</td>
                                             <td>
-                                               EDIT
-                                                </form>
+                                                DETAIL
                                             </td>
                                         </tr>
                                     @endforeach
@@ -118,10 +117,10 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-
 <!-- Control Sidebar -->
 <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
 </aside>
 <!-- /.control-sidebar -->
+
 @include('layouts.footer')

@@ -21,7 +21,7 @@ class DaftarPoli extends Model
 
     public function Periksa()
     {
-        return $this->hasMany(Periksa::class, 'id_daftar_poli', 'id');
+        return $this->hasOne(Periksa::class, 'id_daftar_poli', 'id');
     }
     public function pasien()
     {

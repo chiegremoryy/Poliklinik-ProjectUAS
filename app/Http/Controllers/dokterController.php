@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\jadwalPeriksa;
 use Illuminate\Http\Request;
 use App\Models\DaftarPoli;
+use App\Models\detailPeriksa;
+use App\Models\Obat;
+use App\Models\Periksa;
 
 class dokterController extends Controller
 {
@@ -124,6 +127,13 @@ class dokterController extends Controller
         return redirect()->route('jadwalPeriksa.dokter');
     }
 
+    public function riwayatPeriksa()
+    {
+        $dokter = auth()->user();
+        $jadwalDokter = JadwalPeriksa::where('id_dokter', $dokter->id)->pluck('id');
+        $listPeriksa = DaftarPoli::whereIn('id_jadwal', $jadwalDokter)->with('pasien')->get();
+        return view('pages.dokter.riwayatPeriksa', compact('listPeriksa'));
+    }
 
     public function editProfile(Request $request)
     {
