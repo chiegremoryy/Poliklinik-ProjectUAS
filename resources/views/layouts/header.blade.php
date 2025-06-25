@@ -51,16 +51,15 @@
 
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
-<!-- Brand Logo dan Nama User -->
-<a href="{{ url('/') }}" class="brand-link d-flex flex-column align-items-center text-center py-3">
-    <img src="{{ asset('AdminLTE-3.2.0/dist/img/logo-chie-medical.png') }}" alt="ChieMedical Logo"
-        style="height: 50px; width: auto; opacity: .9;">
-    <span class="brand-text font-weight-light mt-1">ChieMedical</span>
-    @auth
-        <small class="text-white mt-1">{{ Auth::user()->nama }}</small>
-    @endauth
-</a>
-
+            <!-- Brand Logo dan Nama User -->
+            <a href="{{ url('/') }}" class="brand-link d-flex flex-column align-items-center text-center py-3">
+                <img src="{{ asset('AdminLTE-3.2.0/dist/img/logo-chie-medical.png') }}" alt="ChieMedical Logo"
+                    style="height: 50px; width: auto; opacity: .9;">
+                <span class="brand-text font-weight-light mt-1">ChieMedical</span>
+                @auth
+                    <small class="text-white mt-1">{{ Auth::user()->nama }}</small>
+                @endauth
+            </a>
 
             <!-- Sidebar -->
             <div class="sidebar">
