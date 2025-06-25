@@ -106,6 +106,7 @@
   <div class="register-box">
     <div class="card">
       <div class="card-header text-center">
+        <img src="{{ asset('AdminLTE-3.2.0/dist/img/logo-chie-medical.png') }}" alt="ChieMedical Logo" class="img-fluid mb-3" style="height: 60px;">
         <a href="/" class="h1"><b>Chie</b>Medical</a>
       </div>
       <div class="card-body">
