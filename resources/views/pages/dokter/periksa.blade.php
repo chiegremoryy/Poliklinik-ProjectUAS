@@ -7,7 +7,7 @@
             <a href="/pages/dokter" class="nav-link"><i class="nav-icon fas fa-home"></i><p>Dashboard</p></a>
         </li>
         <li class="nav-item">
-            <a href="/pages/dokter/jadwalPeriksa" class="nav-link"><i class="nav-icon fas fa-hospital"></i><p>Jadwal Periksa</p></a>
+            <a href="/pages/dokter/jadwalPeriksa" class="nav-link"><i class="nav-icon fas fa-calendar-week"></i><p>Jadwal Periksa</p></a>
         </li>
         <li class="nav-item">
             <a href="/pages/dokter/periksaPasien" class="nav-link active"><i class="nav-icon fas fa-user-injured"></i><p>Periksa Pasien</p></a>

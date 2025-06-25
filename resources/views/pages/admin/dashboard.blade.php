@@ -38,7 +38,7 @@
           </li>
              <li class="nav-item">
             <a href="/pages/admin/obat" class="nav-link">
-              <i class="nav-icon fas fa-pills"></i>
+              <i class="nav-icon fas fa-vials"></i>
               <p>
                 Obat
               </p>

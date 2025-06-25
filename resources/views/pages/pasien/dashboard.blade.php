@@ -1,4 +1,4 @@
-@include('layouts.header', ['title' => 'Dashboard Pasien'])
+@include('layouts.header', ['title' => 'ChieMedical | Dashboard Pasien'])
 <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -14,9 +14,9 @@
           </li>
            <li class="nav-item">
             <a href="/pages/pasien/poli" class="nav-link">
-              <i class="nav-icon fas fa-hospital"></i>
+              <i class="nav-icon fas fa-stethoscope"></i>
               <p>
-                Poliklinik
+                Poli
               </p>
             </a>
           </li>

@@ -1,4 +1,4 @@
-@include('layouts.header', ['title' => 'Daftar Poli'])
+@include('layouts.header', ['title' => 'Pasien | Daftar Poli'])
 <!-- Sidebar Menu -->
 <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -14,9 +14,9 @@
         </li>
         <li class="nav-item">
             <a href="/pages/pasien/poli" class="nav-link active">
-                <i class="nav-icon fas fa-hospital"></i>
+                <i class="nav-icon fas fa-stethoscope"></i>
                 <p>
-                    Poliklinik
+                    Poli
                 </p>
             </a>
         </li>
@@ -39,7 +39,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Pasien</a></li>
-                        <li class="breadcrumb-item active">Poliklinik</li>
+                        <li class="breadcrumb-item active">Poli</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -54,11 +54,11 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- left column -->
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Daftar Poliklinik</h3>
+                            <h3 class="card-title">Daftar Poli</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
@@ -100,7 +100,7 @@
                 </div>
                 <!--/.col (left) -->
                 <!-- right column -->
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
@@ -115,26 +115,31 @@
                                         <th>#</th>
                                         <th>Poli</th>
                                         <th>Dokter</th>
-                                        <th>Hari</th>
-                                        <th>Mulai</th>
-                                        <th>Selesai</th>
+                                        <th>Jam</th>
                                         <th>Antrian</th>
                                         <th>Status</th>
-                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($showDaftarPoli as $daftarPoli)
                                         <tr>
-                                            <td>{{ $loop->iteration }}</td>
+                                            <td>
+                                                {{ $loop->iteration }}
+                                            </td>
                                             <td>{{ $daftarPoli->jadwalPeriksa?->dokter?->poli?->nama_poli ?? '-' }}</td>
                                             <td>{{ $daftarPoli->jadwalPeriksa?->dokter?->nama ?? '-' }}</td>
-                                            <td>{{ $daftarPoli->jadwalPeriksa?->hari ?? '-' }}</td>
-                                            <td>{{ $daftarPoli->jadwalPeriksa?->jam_mulai ?? '-' }}</td>
-                                            <td>{{ $daftarPoli->jadwalPeriksa?->jam_selesai ?? '-' }}</td>
+                                            <td>{{ $daftarPoli->jadwalPeriksa?->hari ?? '-' }},
+                                                {{ $daftarPoli->jadwalPeriksa?->jam_mulai ?? '-' }} -
+                                                {{ $daftarPoli->jadwalPeriksa?->jam_selesai ?? '-' }}</td>
                                             <td>{{ $daftarPoli->no_antrian }}</td>
-                                            <td>Soon</td>
-                                            <td>Soon</td>
+                                            <td class="text-center">
+                                                @if (is_null($daftarPoli->Periksa?->tgl_periksa))
+                                                    Belum Diperiksa
+                                                @else
+                                                    <span
+                                                        class="badge bg-info">Diperiksa {{ $daftarPoli->Periksa?->tgl_periksa }}</span>
+                                                @endif
+                                            </td>
                                         </tr>
                                     @endforeach
                                 </tbody>

@@ -4,7 +4,7 @@
 <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-item"><a href="/pages/dokter" class="nav-link"><i class="nav-icon fas fa-home"></i><p>Dashboard</p></a></li>
-        <li class="nav-item"><a href="/pages/dokter/jadwalPeriksa" class="nav-link"><i class="nav-icon fas fa-hospital"></i><p>Jadwal Periksa</p></a></li>
+        <li class="nav-item"><a href="/pages/dokter/jadwalPeriksa" class="nav-link"><i class="nav-icon fas fa-calendar-week"></i><p>Jadwal Periksa</p></a></li>
         <li class="nav-item"><a href="/pages/dokter/periksaPasien" class="nav-link"><i class="nav-icon fas fa-user-injured"></i><p>Periksa Pasien</p></a></li>
         <li class="nav-item"><a href="/pages/dokter/riwayatPeriksa" class="nav-link active"><i class="nav-icon fas fa-history"></i><p>Riwayat Periksa</p></a></li>
         <li class="nav-item"><a href="/pages/dokter/profile" class="nav-link"><i class="nav-icon fas fa-user"></i><p>Edit Profile</p></a></li>

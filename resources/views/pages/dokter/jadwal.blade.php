@@ -14,7 +14,7 @@
         </li>
         <li class="nav-item">
             <a href="/pages/dokter/jadwalPeriksa" class="nav-link active">
-                <i class="nav-icon fas fa-hospital"></i>
+                <i class="nav-icon fas fa-calendar-week"></i>
                 <p>
                     Jadwal Periksa
                 </p>
