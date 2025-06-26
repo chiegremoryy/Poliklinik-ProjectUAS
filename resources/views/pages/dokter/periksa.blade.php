@@ -99,7 +99,6 @@
                                                             @foreach(App\Models\Obat::all() as $obat)
                                                                 <div class="col-md-6">
                                                                     <div class="form-check">
-                                                                        <input type="hidden" name="obat" value="">
                                                                         <input class="form-check-input" type="checkbox" name="obat[]" value="{{ $obat->id }}"
                                                                             {{ isset($periksa->periksa) && $periksa->periksa->detailPeriksa->pluck('id_obat')->contains($obat->id) ? 'checked' : '' }}>
                                                                         <label class="form-check-label">{{ $obat->nama_obat }} ({{ $obat->kemasan }})</label>
